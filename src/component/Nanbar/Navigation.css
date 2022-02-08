@@ -1,0 +1,13 @@
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.nav-link {
+  margin: 30px;
+  background-color:rgb(44, 156, 156);
+  color: white !important;
+  border-radius: 2rem;
+}

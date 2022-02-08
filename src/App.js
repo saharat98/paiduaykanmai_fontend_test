@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Home from "./component/Pages/Homepage";
+import Navigation from "./component/Nanbar/Navigation";
+import ReactDOM from "react-dom";
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Pokemon from "./component/Pages/Pokemon";
+import Funtion1 from "./component/Pages/Funtion1";
+import Funtion2 from "./component/Pages/Funtion2";
+import Funtion3 from "./component/Pages/Funtion3";
 function App() {
+  console.log();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="pokemon" element={<Pokemon />}></Route>
+        <Route path="funtion1" element={<Funtion1 />}></Route>
+        <Route path="funtion2" element={<Funtion2 />}></Route>
+        <Route path="funtion3" element={<Funtion3 />}></Route>
+      </Routes>
     </div>
   );
 }
